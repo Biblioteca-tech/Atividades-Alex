@@ -1,0 +1,175 @@
+/**
+ * @file string_utils.c
+ * @brief Exercícios acerca de funções de análise e manipulação de strings em C
+ * 
+ * Conjunto de funções simples e progressivas para aprendizado de manipulação de strings,
+ * ponteiros, iteração em arrays de char, passagem por valor/referência e tratamento de casos borda.
+ */
+
+#include <string.h>  /* funções strlen() e strcpy() são permitidas */
+
+/* ========================================================================= */
+/* Funções de contagem e verificação                                        */
+/* ========================================================================= */
+
+/**
+ * @brief Conta o número de vogais (a,e,i,o,u,A,E,I,O,U) na string
+ * @param str Ponteiro para a string terminada em '\0'
+ * @return Número de vogais encontradas
+ */
+int contar_vogais(const char *str);
+
+/**
+ * @brief Conta o número de consoantes (letras que não são vogais)
+ * @note Ignora espaços, dígitos, pontuação e outros caracteres não-letra
+ * @param str Ponteiro para a string terminada em '\0'
+ * @return Número de consoantes encontradas
+ */
+int contar_consoantes(const char *str);
+
+/**
+ * @brief Conta o número de palavras na string
+ * @note Palavras são separadas por espaços, tabs ou quebras de linha
+ * @note Considera múltiplos separadores consecutivos como um só
+ * @param str Ponteiro para a string terminada em '\0'
+ * @return Número de palavras (0 se string vazia ou só espaços)
+ */
+int contar_palavras(const char *str);
+
+/**
+ * @brief Conta quantas letras maiúsculas (A-Z) existem na string
+ * @param str Ponteiro para a string terminada em '\0'
+ * @return Quantidade de letras maiúsculas
+ */
+int contar_letras_maiusculas(const char *str);
+
+/**
+ * @brief Verifica se a string é um palíndromo
+ * @note Ignora maiúsculas/minúsculas, espaços e caracteres não-alfabéticos
+ * @param str Ponteiro para a string terminada em '\0'
+ * @return 1 se for palíndromo, 0 caso contrário
+ */
+int eh_palindromo(const char *str);
+
+/**
+ * @brief Conta quantas vezes um determinado caractere aparece na string
+ * @param str Ponteiro para a string terminada em '\0'
+ * @param c Caractere a ser procurado
+ * @return Número de ocorrências do caractere
+ */
+int contar_ocorrencias(const char *str, char c);
+
+/**
+ * @brief Conta quantas vezes uma substring aparece no texto (não sobreposto)
+ * @param texto String onde procurar
+ * @param busca Substring a ser encontrada
+ * @return Número de ocorrências encontradas
+ */
+int contar_substring(const char *texto, const char *busca);
+
+/* ========================================================================= */
+/* Funções que modificam a string (in-place quando possível)                */
+/* ========================================================================= */
+
+/**
+ * @brief Converte todos os caracteres da string para maiúsculas
+ * @param str String a ser modificada (deve ser modificável)
+ */
+void converter_para_maiusculas(char *str);
+
+/**
+ * @brief Converte todos os caracteres da string para minúsculas
+ * @param str String a ser modificada (deve ser modificável)
+ */
+void converter_para_minusculas(char *str);
+
+/**
+ * @brief Inverte a ordem dos caracteres da string (in-place)
+ * @param str String a ser invertida (deve ser modificável)
+ */
+void inverter_string(char *str);
+
+/**
+ * @brief Remove espaços extras: deixa apenas um espaço entre palavras,
+ * remove espaços no início e no final da string
+ * @param str String a ser normalizada (deve ser modificável)
+ */
+void remover_espacos_extras(char *str);
+
+/**
+ * @brief Substitui todas as ocorrências de um caractere por outro
+ * @param str String a ser modificada
+ * @param antigo Caractere a ser substituído
+ * @param novo Novo caractere
+ */
+void substituir_caractere(char *str, char antigo, char novo);
+
+/* ========================================================================= */
+/* Funções de busca de posição e extração                                   */
+/* ========================================================================= */
+
+/**
+ * @brief Retorna a posição da primeira ocorrência de um caractere
+ * @param str String onde procurar
+ * @param c Caractere procurado
+ * @return Índice (0-based) ou -1 se não encontrado
+ */
+int primeiro_indice(const char *str, char c);
+
+/**
+ * @brief Retorna a posição da última ocorrência de um caractere
+ * @param str String onde procurar
+ * @param c Caractere procurado
+ * @return Índice (0-based) ou -1 se não encontrado
+ */
+int ultimo_indice(const char *str, char c);
+
+/**
+ * @brief Extrai as iniciais de um nome completo (com pontos ou sem)
+ * @param destino Buffer onde será escrito o resultado (deve ter espaço suficiente)
+ * @param nome_completo Nome completo (ex: "Maria da Silva Santos")
+ * @note Escreve apenas as letras maiúsculas iniciais (ex: "MDS")
+ */
+void extrair_iniciais(char *destino, const char *nome_completo);
+
+/**
+ * @brief Verifica se duas strings são anagramas uma da outra
+ * @note Ignora maiúsculas/minúsculas e considera apenas letras
+ * @param a Primeira string
+ * @param b Segunda string
+ * @return 1 se forem anagramas, 0 caso contrário
+ */
+int eh_anagrama(const char *a, const char *b);
+
+/* ========================================================================= */
+/* Funções de validação de conteúdo                                         */
+/* ========================================================================= */
+
+/**
+ * @brief Conta quantos dígitos (0-9) existem na string
+ * @param str String a ser analisada
+ * @return Quantidade de caracteres numéricos
+ */
+int contar_digitos(const char *str);
+
+/**
+ * @brief Verifica se a string contém apenas letras (a-z A-Z)
+ * @param str String a ser verificada
+ * @return 1 se for estritamente alfabética, 0 caso contrário
+ */
+int eh_alfabetico(const char *str);
+
+/**
+ * @brief Verifica se a string contém apenas dígitos (0-9)
+ * @param str String a ser verificada
+ * @return 1 se for estritamente numérica, 0 caso contrário
+ */
+int eh_numerico(const char *str);
+
+/**
+ * @brief Capitaliza a primeira letra de cada palavra
+ * @note Considera palavras separadas por espaços
+ * @param str String a ser modificada (deve ser modificável)
+ * @example "ola mundo" → "Ola Mundo"
+ */
+void capitalizar_palavras(char *str);
