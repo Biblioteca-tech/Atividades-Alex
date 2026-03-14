@@ -93,3 +93,46 @@ int main() {
 
     return 0; //finalizou
 }
+
+
+// RESULTADOS DOS TESTES:
+
+//ENTRADA A: "amor"
+//ENTRADA B: "roma"
+//SAIDA: 1
+
+//ENTRADA A: "listen"
+//ENTRADA B: "silent"
+//SAIDA: 1
+
+//ENTRADA A: "abc"
+//ENTRADA B: "cab"
+//SAIDA: 1
+
+//ENTRADA A: "abc"
+//ENTRADA B: "abcd"
+//SAIDA: 0
+
+//ENTRADA A: "hello"
+//ENTRADA B: "world"
+//SAIDA: 0
+
+//ENTRADA A: "roma"
+//ENTRADA B: "amor"
+//SAIDA: 1
+
+//ENTRADA A: "teste"
+//ENTRADA B: "sete"
+//SAIDA: 0
+
+//ENTRADA A: "anagrama"
+//ENTRADA B: "amaragan"
+//SAIDA: 1
+
+//ENTRADA A: "abc"
+//ENTRADA B: "def"
+//SAIDA: 0
+
+//ENTRADA A: "rat"
+//ENTRADA B: "tar"
+//SAIDA: 1
