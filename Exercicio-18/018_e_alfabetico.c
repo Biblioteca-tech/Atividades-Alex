@@ -1,6 +1,13 @@
 // PARADIGMAS DE PROGRAMAÇÃO - PROFº ALEX TORQUATO - FACULDADE IMPACTA
 // É/NÃO ALFABÉTICO - EXRCÍCIO 018 - ATIVIDADE 01
 
+//ENUNCIADO DO EXERCÍCIO:
+
+//@brief Verifica se a string contém apenas letras (a-z A-Z)
+//@param str String a ser verificada
+//@return 1 se for estritamente alfabética, 0 caso contrário
+
+//RESOLUÇÃO DO EXERCÍCIO:
 
 #include <stdio.h> // biblioteca para usar printf e scanf
 
@@ -8,7 +15,7 @@ int eh_alfabetico(const char *str) { // função que verifica se a palavra tem A
 
     int i = 0; // variável usada para percorrer a palavra
  
-    while (str[i] != '\0') { // percorre a palavra até encontrar o final da string   '\0'
+    while (str[i] != '\0') { // percorre a palavra até encontrar o final da string '\0'
         if (!((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z'))) { // verifica se o caractere NÃO está entre a-z ou A-Z
             return 0; // se encontrar número ou símbolo retorna 0
         }
@@ -19,18 +26,27 @@ int eh_alfabetico(const char *str) { // função que verifica se a palavra tem A
 
 int main() {
 
-    char texto[100]; // espaço para guardar a palavra
+    char *entradas[] = { // lista de palavras usadas nos testes
+        "abc",
+        "ABC",
+        "abc123",
+        "123",
+        "hello",
+        "ola mundo",
+        "",
+        "Java",
+        "C99",
+        "teste!"
+    };
 
-    printf("Digite uma palavra: "); // usuário digita uma palavra
-    scanf("%s", texto); // lê a palavra digitada
+    int quantidade_testes = 10; // quantidade de testes
 
-    if (eh_alfabetico(texto)) { // chama a função para verificar
+    for (int i = 0; i < quantidade_testes; i++) { // percorre todos os testes
 
-        printf("1\n"); // só tem letras
+        int resultado = eh_alfabetico(entradas[i]); // chama a função para verificar se é alfabético
 
-    } else {
-
-        printf("0\n"); // tem número ou símbolo
+        printf("ENTRADA: \"%s\"\n", entradas[i]); // mostra a palavra
+        printf("SAIDA: %d\n\n", resultado); // mostra o resultado
     }
 
     return 0; // finalizou
