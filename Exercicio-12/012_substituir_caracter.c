@@ -71,3 +71,57 @@ int main() {
 
     return 0; // finalizou
 }
+
+
+
+//RESULTADO DOS TESTES:
+
+//ENTRADA: "banana"
+//ANTIGO: 'a'
+//NOVO: 'o'
+//SAIDA: "bonono"
+
+//ENTRADA: "teste"
+//ANTIGO: 'e'
+//NOVO: 'i'
+//SAIDA: "tisti"
+
+//ENTRADA: "abc"
+//ANTIGO: 'x'
+//NOVO: 'y'
+//SAIDA: "abc"
+
+//ENTRADA: "aaaa"
+//ANTIGO: 'a'
+//NOVO: 'b'
+//SAIDA: "bbbb"
+
+//ENTRADA: "hello"
+//ANTIGO: 'l'
+//NOVO: 'x'
+//SAIDA: "hexxo"
+
+//ENTRADA: ""
+//ANTIGO: 'a'
+//NOVO: 'b'
+//SAIDA: ""
+
+//ENTRADA: "1231"
+//ANTIGO: '1'
+//NOVO: '9'
+//SAIDA: "9239"
+
+//ENTRADA: "casa"
+//ANTIGO: 'a'
+//NOVO: 'e'
+//SAIDA: "cese"
+
+//ENTRADA: "java"
+//ANTIGO: 'j'
+//NOVO: 'J'
+//SAIDA: "Java"
+
+//ENTRADA: "abc"
+//ANTIGO: 'c'
+//NOVO: 'd'
+//SAIDA: "abd"
