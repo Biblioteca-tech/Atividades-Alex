@@ -1,6 +1,15 @@
 // PARADIGMAS DE PROGRAMAÇÃO - PROFº ALEX TORQUATO - FACULDADE IMPACTA
 // É/NÃO ANAGRAMA - EXRCÍCIO 016 - ATIVIDADE 01
 
+// ENUNCIADO DO EXERCÍCIO:
+
+//@brief Verifica se duas strings são anagramas uma da outra
+//@note Ignora maiúsculas/minúsculas e considera apenas letras
+//@param a Primeira string
+//@param b Segunda string
+//@return 1 se forem anagramas, 0 caso contrário
+
+//RESOLUÇÃO DO EXERCÍCIO:
 
 #include <stdio.h> // biblioteca para usar printf e scanf
 
@@ -31,7 +40,7 @@ int eh_anagrama(const char *a, const char *b) { // Função que verifica se duas
 
                 usadas[j] = 1; // marca que essa letra já foi usada
                 encontrou = 1; // diz que encontrou a letra
-                break; // sai do while
+                break; // sai do for
             }
         }
 
@@ -45,20 +54,41 @@ int eh_anagrama(const char *a, const char *b) { // Função que verifica se duas
 
 int main() {
 
-    char a[100]; // primeira palavra
-    char b[100]; // segunda palavra
+    char *entradas_a[] = { // lista das primeiras palavras dos testes
+        "amor",
+        "listen",
+        "abc",
+        "abc",
+        "hello",
+        "roma",
+        "teste",
+        "anagrama",
+        "abc",
+        "rat"
+    };
 
-    printf("Digite a primeira palavra: "); // usuario digita uma palavra
-    scanf("%s", a); // lê a palavra
+    char *entradas_b[] = { // lista das segundas palavras dos testes
+        "roma",
+        "silent",
+        "cab",
+        "abcd",
+        "world",
+        "amor",
+        "sete",
+        "amaragan",
+        "def",
+        "tar"
+    };
 
-    printf("Digite a segunda palavra: "); // usuário digita outra palavara
-    scanf("%s", b); //lê a palavra
+    int quantidade_testes = 10; // quantidade de testes
 
-    
-    if (eh_anagrama(a, b)) { // verifica se são anagramas
-        printf("1\n"); // são anagramas
-    } else {
-        printf("0\n"); // não são anagramas
+    for (int i = 0; i < quantidade_testes; i++) { // percorre todos os testes
+
+        int resultado = eh_anagrama(entradas_a[i], entradas_b[i]); // chama a função para verificar se são anagramas
+
+        printf("ENTRADA A: \"%s\"\n", entradas_a[i]); // mostra a primeira palavra
+        printf("ENTRADA B: \"%s\"\n", entradas_b[i]); // mostra a segunda palavra
+        printf("SAIDA: %d\n\n", resultado); // mostra o resultado
     }
 
     return 0; //finalizou
