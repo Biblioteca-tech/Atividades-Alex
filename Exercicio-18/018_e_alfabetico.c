@@ -9,7 +9,7 @@
 
 //RESOLUÇÃO DO EXERCÍCIO:
 
-#include <stdio.h> // biblioteca para usar printf e scanf
+#include <stdio.h> // biblioteca para usar printf
 
 int eh_alfabetico(const char *str) { // função que verifica se a palavra tem APENAS letras  
 

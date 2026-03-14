@@ -1,6 +1,15 @@
 // PARADIGMAS DE PROGRAMAÇÃO - PROFº ALEX TORQUATO - FACULDADE IMPACTA
 // CAPITALIZAR PALAVRAS - EXRCÍCIO 020 - ATIVIDADE 01
 
+//ENUNCIADO DO EXERCÍCIO:
+
+//@brief Capitaliza a primeira letra de cada palavra
+//@note Considera palavras separadas por espaços
+//@param str String a ser modificada (deve ser modificável)
+//@example "ola mundo" → "Ola Mundo"
+
+//RESOLUÇÃO DO EXERCÍCIO:
+
 #include <stdio.h> // biblioteca para usar printf e scanf
 
 void capitalizar_palavras(char *str) {
@@ -23,13 +32,38 @@ void capitalizar_palavras(char *str) {
 
 int main() {
 
-    char texto[100]; // aquipara armazena a frase/palavra
+    char *entradas[] = { // lista de frases usadas nos testes
+        "ola mundo",
+        "java programming",
+        "hello world",
+        "a b c",
+        "teste",
+        "programacao em c",
+        "",
+        "abc def ghi",
+        "open ai",
+        "estrutura de dados"
+    };
 
-    printf("Digite uma frase: "); // pede ao usuário que digite uma frase/palavra
-    fgets(texto, sizeof(texto), stdin); // lê a frase digitada
-    capitalizar_palavras(texto); // chama a função que capitaliza as palavras
+    int quantidade_testes = 10; // quantidade de testes
 
-    printf("Resultado: %s", texto); // mostra a frase modificada
+    for (int i = 0; i < quantidade_testes; i++) { // percorre todos os testes
+
+        char frase[100]; // espaço para copiar a frase
+        int j = 0; // variável para copiar caractere por caractere
+
+        while (entradas[i][j] != '\0') { // copia a frase da lista
+            frase[j] = entradas[i][j]; // copia cada letra
+            j++; // passa para a próxima posição
+        }
+
+        frase[j] = '\0'; // finaliza a string
+
+        capitalizar_palavras(frase); // chama a função que capitaliza as palavras
+
+        printf("ENTRADA: \"%s\"\n", entradas[i]); // mostra a frase original
+        printf("SAIDA: \"%s\"\n\n", frase); // mostra a frase modificada
+    }
 
     return 0; // finalizou
 }
