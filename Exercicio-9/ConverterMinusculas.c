@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <string.h>
 
-char minuscula(char c) {
+char minuscula(char c) { // função para poder converter maiúscula em minúscula usando a tabela ASCII.
     if (c >= 'A' && c <= 'Z') {
         return c + 32;
     }

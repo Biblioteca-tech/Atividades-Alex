@@ -1,103 +1,48 @@
-// PARADIGMAS DE PROGRAMAÇÃO - PROFº ALEX TORQUATO - FACULDADE IMPACTA
-// INVERTER PALAVRAS - EXERCÍCIO 010 - ATIVIDADE 01
+/**
+ * @brief Inverte a ordem dos caracteres da string (in-place)
+ * @param str String a ser invertida (deve ser modificável)
+ */
 
-// ENUNCIADO DO EXERCÍCIO:
 
-// @brief Inverte a ordem dos caracteres da string (in-place)
-// @param str String a ser invertida (deve ser modificável)
-
-//RESOLUÇÃO DO EXERCÍCIO:
-
-#include <stdio.h> // biblioteca para usar printf
+#include <stdio.h> // biblioteca para usar printf e scanf
 
 void inverter_string(char *str) { // função usada que invesrte a palavra
-    int inicio = 0; // posição inicial
-    int fim = 0; // posição final
-    char temp; // variável usada para trocar caracteres
 
-    while (str[fim] != '\0') { // encontra o final da string
-        fim++; // avança
+    int inicio = 0; // posição inicial da palavra
+    int fim = 0; // posição final da palavra
+    char temp; // usado para trocar as letras de posição
+
+    while (str[fim] != '\0') { // descobrir o tamanho da palavra
+        fim++; // anda até encontrar o final da strin
     }
+    fim = fim - 1; // volta uma posição para pegar a última letra
 
-    fim--; // volta uma posição para pegar o último caractere
-
-    while (inicio < fim) { // enquanto o início for menor que o fim
-        temp = str[inicio]; // guarda o caractere inicial
-        str[inicio] = str[fim]; // coloca o final no início
-        str[fim] = temp; // coloca o guardado no final
-        inicio++; // avança início
-        fim--; // recua fim
+    while (inicio < fim) { // enquanto o começo for menor que o final
+        temp = str[inicio]; // aqui ela guarda a letra do começo
+        str[inicio] = str[fim]; // aui ela coloca a letra do final no começo
+        str[fim] = temp; // aqui ela coloca a letra guardada no final
+        inicio++; // anda uma posição para frente
+        fim--; // anda uma posição para trás
     }
 }
 
 int main() {
+    //char texto[] = "Caio 2401371, Estevan 2400524, Iarley 2400918, Mikeias 2400176";
+    //char texto[] = "abc"; saida: cba
+    //char texto[] = "hello"; saida: olleh
+    //char texto[] = "a"; saida: a
+    //char texto[] = ""; saida: ""
+    //char texto[] = "12345"; saida: 54321
+    //char texto[] = "ab"; saida: ba
+    //char texto[] = "teste"; saida: etset
+    //char texto[] = "programa"; saida: amargorp
+    //char texto[] = "xyz"; saida: zyx
+    //char texto[] = "abcd"; saida: dcba
 
-    char *entradas[] = { // lista de testes
-        "abc",
-        "hello",
-        "a",
-        "",
-        "12345",
-        "ab",
-        "teste",
-        "programa",
-        "xyz",
-        "abcd"
-    };
+    char texto[100]; // é o local para armazenar a palavra
 
-    int total = 10; // quantidade de testes
-
-    for (int i = 0; i < total; i++) { // percorre os testes
-
-        char palavra[100]; // buffer para copiar a palavra
-        int j = 0;
-
-        while (entradas[i][j] != '\0') { // copia a string
-            palavra[j] = entradas[i][j];
-            j++;
-        }
-
-        palavra[j] = '\0'; // finaliza string
-
-        inverter_string(palavra); // chama a função
-
-        printf("ENTRADA: \"%s\"\n", entradas[i]); // mostra a entrada
-        printf("SAIDA: \"%s\"\n\n", palavra); // mostra a saída
-
-    }
-
-    return 0; // finaliza
+    printf("Digite uma palavra: "); // pede que o usuário digite uma palavra
+    scanf("%s", texto); // vai ler a palavra digitada
+    inverter_string(texto); // vai chamar a função que inverte
+    printf("%s\n", texto); // vai mostrar a palavra invertida
 }
-
-
-//RESULTADOS DOS TESTES:
-
-//ENTRADA: "abc"
-//SAIDA: "cba"
-
-//ENTRADA: "hello"
-//SAIDA: "olleh"
-
-//ENTRADA: "a"
-//SAIDA: "a"
-
-//ENTRADA: ""
-//SAIDA: ""
-
-//ENTRADA: "12345"
-//SAIDA: "54321"
-
-//ENTRADA: "ab"
-//SAIDA: "ba"
-
-//ENTRADA: "teste"
-//SAIDA: "etset"
-
-//ENTRADA: "programa"
-//SAIDA: "amargorp"
-
-//ENTRADA: "xyz"
-//SAIDA: "zyx"
-
-//ENTRADA: "abcd"
-//SAIDA: "dcba"
