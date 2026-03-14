@@ -52,6 +52,6 @@ int main() {
     //char texto[] = "abcd"; //não é palíndromo
     //char texto[] = ""; //é um palíndromo
     //char texto[] = "a"; //é um palíndromo
-    char texto[] = "Ovo"; //é um palíndromo
+    char texto[] = "Roma me tem amor"; //é um palíndromo
     printf("%d\n", eh_palindromo(texto));
 }
