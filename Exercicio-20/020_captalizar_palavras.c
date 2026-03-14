@@ -10,7 +10,7 @@
 
 //RESOLUÇÃO DO EXERCÍCIO:
 
-#include <stdio.h> // biblioteca para usar printf e scanf
+#include <stdio.h> // biblioteca para usar printf
 
 void capitalizar_palavras(char *str) {
 
