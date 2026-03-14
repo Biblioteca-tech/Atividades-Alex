@@ -68,3 +68,36 @@ int main() {
 
     return 0; // finaliza
 }
+
+
+//RESULTADOS DOS TESTES:
+
+//ENTRADA: "abc"
+//SAIDA: "cba"
+
+//ENTRADA: "hello"
+//SAIDA: "olleh"
+
+//ENTRADA: "a"
+//SAIDA: "a"
+
+//ENTRADA: ""
+//SAIDA: ""
+
+//ENTRADA: "12345"
+//SAIDA: "54321"
+
+//ENTRADA: "ab"
+//SAIDA: "ba"
+
+//ENTRADA: "teste"
+//SAIDA: "etset"
+
+//ENTRADA: "programa"
+//SAIDA: "amargorp"
+
+//ENTRADA: "xyz"
+//SAIDA: "zyx"
+
+//ENTRADA: "abcd"
+//SAIDA: "dcba"
