@@ -1,15 +1,23 @@
 // PARADIGMAS DE PROGRAMAÇÃO - PROFº ALEX TORQUATO - FACULDADE IMPACTA
 // SUBSTITUIR CARACTERES - EXRCÍCIO 012 - ATIVIDADE 01
 
+// ENUNCIADO DO EXERCÍCIO:
 
-#include <stdio.h> // biblioteca para usar printf e scanf
+ // @brief Substitui todas as ocorrências de um caractere por outro
+ // @param str String a ser modificada
+ // @param antigo Caractere a ser substituído
+ // @param novo Novo caractere
+ 
+ //RESOLUÇÃO DO EXERCÍCIO:
 
-void substituir_caractere(char *str, char antigo, char novo) { // função que troca um caractere por outro dentro da palavra
+#include <stdio.h> // biblioteca para usar printf 
 
-    int i = 0; // variável que vai percorrer toda a palavra  ---> ex.: banana
+void substituir_caractere(char *str, char antigo, char novo) { // função que substitui caracteres
 
-    while (str[i] != '\0') { // percorre a palavra até encontrar o final da string  '\0'
-        if (str[i] == antigo) { // verifica se a letra atual (ex.: a) é igual ao caractere que quero trocar (ex.: o) 
+    int i = 0; // variável que vai percorrer toda a palavra ---> ex.: banana
+
+    while (str[i] != '\0') { // percorre a palavra até o final da string
+        if (str[i] == antigo) { // verifica se a letra atual (ex.: a) é igual ao caractere que quero trocar (ex.: o)
             str[i] = novo; // se for igual, substitui pelo novo caractere
         }
         i++; // passa para a próxima letra da palavra (b a n a n a)
@@ -18,21 +26,48 @@ void substituir_caractere(char *str, char antigo, char novo) { // função que t
 
 int main() {
 
-    char texto[100];// espaço para guardar a palavra digitada pelo usuário
-    char antigo, novo; // variáveis para guardar os caracteres
+    char *entradas[] = { // lista de palavras para teste
+        "banana",
+        "teste",
+        "abc",
+        "aaaa",
+        "hello",
+        "",
+        "1231",
+        "casa",
+        "java",
+        "abc"
+    };
 
-    printf("Digite uma palavra: "); // pede para o usuário digitar uma palavra
-    scanf("%s", texto); // lê a palavra digitada
+    char antigos[] = { // caracteres antigos
+        'a','e','x','a','l','a','1','a','j','c'
+    };
 
-    printf("Caractere a substituir: "); // pergunta qual letra será trocada --- ex.: banana --> a --> o
-    scanf(" %c", &antigo); // lê o caractere que será substituído ---> ex.: a
+    char novos[] = { // novos caracteres
+        'o','i','y','b','x','b','9','e','J','d'
+    };
 
-    printf("Novo caractere: "); // pergunta qual será o novo caractere --> ex.: o
-    scanf(" %c", &novo); // lê o novo caractere
+    int total = 10; // quantidade de testes
 
-    substituir_caractere(texto, antigo, novo); // chama a função que faz a troca
+    for (int i = 0; i < total; i++) { // percorre todos os testes
 
-    printf("Resultado: %s\n", texto); // mostra a palavra depois do troca troca
+        char palavra[100]; // buffer para copiar a palavra
+        int j = 0;
+
+        while (entradas[i][j] != '\0') { // copia a string manualmente
+            palavra[j] = entradas[i][j];
+            j++;
+        }
+
+        palavra[j] = '\0'; // finaliza a string
+
+        substituir_caractere(palavra, antigos[i], novos[i]); // chama a função
+
+        printf("ENTRADA: \"%s\"\n", entradas[i]); // mostra entrada
+        printf("ANTIGO: '%c'\n", antigos[i]); // mostra caractere antigo
+        printf("NOVO: '%c'\n", novos[i]); // mostra caractere novo
+        printf("SAIDA: \"%s\"\n\n", palavra); // mostra resultado
+    }
 
     return 0; // finalizou
 }
