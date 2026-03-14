@@ -51,3 +51,36 @@ int main() {
 
     return 0; // finalizou
 }
+
+
+//RESULTADO ESPERADO:
+
+//ENTRADA: "abc"
+//SAIDA: 1
+
+//ENTRADA: "ABC"
+//SAIDA: 1
+
+//ENTRADA: "abc123"
+//SAIDA: 0
+
+//ENTRADA: "123"
+//SAIDA: 0
+
+//ENTRADA: "hello"
+//SAIDA: 1
+
+//ENTRADA: "ola mundo"
+//SAIDA: 0
+
+//ENTRADA: ""
+//SAIDA: 1
+
+//ENTRADA: "Java"
+//SAIDA: 1
+
+//ENTRADA: "C99"
+//SAIDA: 0
+
+//ENTRADA: "teste!"
+//SAIDA: 0
