@@ -41,8 +41,8 @@ int main() {
     //char texto[] = "a b c d"; //4 palavras
     //char texto[] = "palavra"; //1 palavras
     //char texto[] = "linha1\nlinha2"; //2 palavras
-    char texto[] = "b\tc\td"; //3 palavras
+    char texto[] = "a\tb\tc"; //3 palavras
     int totalPalavras = contar_palavras(texto);
-    printf("Total de palavras: %d\n", totalPalavras);
+    printf("%d\n", totalPalavras);
     return 0;
 }

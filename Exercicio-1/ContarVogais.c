@@ -31,9 +31,9 @@ int main() {
     //char texto[] = "Programacao"; //5 vogais
     //char texto[] = "HELLO"; //2 vogais
     //char texto[] = "12345"; //0 vogais
-    char texto[] = "a e i o u"; //5 vogais
+    char texto[] = "Programacao"; //5 vogais
     int resultado = contar_vogais(texto);
-    printf("Número de vogais: %d\n", resultado);
+    printf("%d\n", resultado);
 
     return 0;
 }

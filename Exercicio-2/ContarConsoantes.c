@@ -41,8 +41,8 @@ int main() {
     //char texto[] = "HELLO"; //3 consoantes
     //char texto[] = "123abc"; //2 consoantes
     //char texto[] = "A B C"; //2 consoantes
-    char texto[] = "!!!"; //0 consoantes
+    char texto[] = "!!"; //0 consoantes
     int totalConsoantes = contar_consoantes(texto);
-    printf("Total de consoantes: %d\n", totalConsoantes);
+    printf("%d\n", totalConsoantes);
     return 0;
 }
