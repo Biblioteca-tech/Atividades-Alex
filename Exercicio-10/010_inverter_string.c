@@ -1,21 +1,16 @@
 // PARADIGMAS DE PROGRAMAÇÃO - PROFº ALEX TORQUATO - FACULDADE IMPACTA
 // INVERTER PALAVRAS - EXERCÍCIO 010 - ATIVIDADE 01
 
-
 // ENUNCIADO DO EXERCÍCIO:
 
 // @brief Inverte a ordem dos caracteres da string (in-place)
 // @param str String a ser invertida (deve ser modificável)
-// void inverter_string(char *str); 
-
 
 //RESOLUÇÃO DO EXERCÍCIO:
 
-
 #include <stdio.h> // biblioteca para usar printf
 
-void inverter_string(char *str) { // função que inverte a string
-
+void inverter_string(char *str) { // função usada que invesrte a palavra
     int inicio = 0; // posição inicial
     int fim = 0; // posição final
     char temp; // variável usada para trocar caracteres
