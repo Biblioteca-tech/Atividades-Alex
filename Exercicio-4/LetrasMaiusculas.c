@@ -13,7 +13,7 @@ int contar_letras_maiusculas(const char *str) {
 }
 
 int main() {
-    char texto[] = "Exemplo de Texto com Letras iúsculas.";
+    char texto[] = "Exemplo de Texto com Letras MAiúscuLas.";
     int totalMaiusculas = contar_letras_maiusculas(texto);
     printf("Total de letras maiúsculas: %d\n", totalMaiusculas);
     return 0;

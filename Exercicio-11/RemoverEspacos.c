@@ -18,3 +18,4 @@ int main() {
     printf("Texto sem espaços: %s\n", texto);
     return 0;
 }
+

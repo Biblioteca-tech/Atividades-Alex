@@ -15,7 +15,7 @@ int contar_ocorrencias(const char *str, char c) {
 
 int main() {
     char texto[] = "Coisas ruins acontecem com pessoas boas.";
-    char c = 'p';
+    char c = '#';
     int totalOcorrencias = contar_ocorrencias(texto, c);
     printf("Total de ocorrencias do caractere '%c': %d\n", c, totalOcorrencias);
     return 0;

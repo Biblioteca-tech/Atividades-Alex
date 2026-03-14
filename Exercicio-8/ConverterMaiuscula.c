@@ -9,7 +9,7 @@ void converter_para_maiusculas(char *str) {
 }
 
 int main() {
-    char texto[] = "iarley muito bonitao.";
+    char texto[] = "iarley muito boiolA.";
     converter_para_maiusculas(texto);
     printf("Texto em maiúsculas: %s\n", texto);
     return 0;

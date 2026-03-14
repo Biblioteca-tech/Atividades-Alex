@@ -21,7 +21,7 @@ int eh_palindromo(const char *str) {
     return 1;
 }
 int main() {
-    char texto[] = "ovo";
+    char texto[] = "arara";
     if (eh_palindromo(texto)) {
         printf("'%s' é um palíndromo.\n", texto);
     } else {

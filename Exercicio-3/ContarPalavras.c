@@ -21,7 +21,7 @@ int contarPalavras(char *str) {
 }
 
 int main() {
-    char texto[] = "Exemplo de texto para contar palavras.";
+    char texto[] = "Oi meu nome outro e Mikeias dele Lima Lopes Dell E E";
     int totalPalavras = contarPalavras(texto);
     printf("Total de palavras: %d\n", totalPalavras);
     return 0;
