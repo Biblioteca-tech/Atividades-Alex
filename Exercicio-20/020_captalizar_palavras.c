@@ -67,3 +67,36 @@ int main() {
 
     return 0; // finalizou
 }
+
+
+//RESULTADO ESPERADO:
+
+//ENTRADA: "ola mundo"
+//SAIDA: "Ola Mundo"
+
+//ENTRADA: "java programming"
+//SAIDA: "Java Programming"
+
+//ENTRADA: "hello world"
+//SAIDA: "Hello World"
+
+//ENTRADA: "a b c"
+//SAIDA: "A B C"
+
+//ENTRADA: "teste"
+//SAIDA: "Teste"
+
+//ENTRADA: "programacao em c"
+//SAIDA: "Programacao Em C"
+
+//ENTRADA: ""
+//SAIDA: ""
+
+//ENTRADA: "abc def ghi"
+//SAIDA: "Abc Def Ghi"
+
+//ENTRADA: "open ai"
+//SAIDA: "Open Ai"
+
+//ENTRADA: "estrutura de dados"
+//SAIDA: "Estrutura De Dados"
