@@ -62,3 +62,46 @@ int main()
 
     return 0; // finalizou
 }
+
+
+//RESULTADOS DOS TESTES:
+
+//ENTRADA: "banana"
+//CARACTERE: a
+//SAIDA: 5
+
+//ENTRADA: "banana"
+//CARACTERE: b
+//SAIDA: 0
+
+//ENTRADA: "banana"
+//CARACTERE: n
+//SAIDA: 4
+
+//ENTRADA: "banana"
+//CARACTERE: x
+//SAIDA: -1
+
+//ENTRADA: ""
+//CARACTERE: a
+//SAIDA: -1
+
+//ENTRADA: "abc"
+//CARACTERE: c
+//SAIDA: 2
+
+//ENTRADA: "hello"
+//CARACTERE: l
+//SAIDA: 3
+
+//ENTRADA: "aaaa"
+//CARACTERE: a
+//SAIDA: 3
+
+//ENTRADA: "teste"
+//CARACTERE: t
+//SAIDA: 3
+
+//ENTRADA: "xyz"
+//CARACTERE: z
+//SAIDA: 2
