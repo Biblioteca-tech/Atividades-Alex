@@ -1,0 +1,104 @@
+Caio RA: 2401371
+Estêvan RA: 2400524
+Iarley RA: 2400918
+Mikeias RA: 2400176
+
+
+1 -
+
+“A função contar_vogais recebe uma string e conta quantas vogais existem nela. Ela usa um ponteiro para percorrer a string caractere por caractere até encontrar o final. Em cada posição, verifica se o caractere é uma vogal, tanto minúscula quanto maiúscula. Se for, incrementa a variável contador. Depois avança para o próximo caractere. Quando termina de percorrer toda a string, a função retorna o número total de vogais encontradas.”
+
+
+2 -
+
+“A função contar_consoantes percorre a string caractere por caractere usando um ponteiro. Primeiro ela verifica se o caractere é uma letra, ignorando números, espaços e símbolos. Se for letra maiúscula, ela converte para minúscula para facilitar a comparação. Depois verifica se não é uma vogal. Se não for vogal, significa que é uma consoante, então o contador é incrementado. No final da string, a função retorna o total de consoantes encontradas.”
+
+
+3 -
+
+“A função contar_palavras percorre a string caractere por caractere usando um ponteiro. Ela verifica se o caractere atual é diferente de espaço, tab ou quebra de linha. Quando encontra o início de uma palavra e não estava dentro de uma antes, incrementa o contador e marca que está dentro de uma palavra. Quando encontra um separador, marca que saiu da palavra. Assim, mesmo com vários espaços seguidos, cada palavra é contada apenas uma vez. No final, retorna o total de palavras encontradas.”
+
+
+4 -
+
+“A função contar_letras_maiusculas percorre a string caractere por caractere usando um ponteiro. Em cada posição, ela verifica se o caractere está entre 'A' e 'Z', que são as letras maiúsculas na tabela ASCII. Se for, o contador é incrementado. Depois o ponteiro avança para o próximo caractere da string. Quando chega ao final da string, a função retorna o total de letras maiúsculas encontradas.”
+
+
+5 - 
+
+“A função palindromo verifica se uma string pode ser lida igual de frente para trás e de trás para frente. Ela usa dois índices: um no começo e outro no final da string. Enquanto compara os caracteres, ignora espaços e símbolos, considerando apenas letras. Também converte letras maiúsculas para minúsculas para não diferenciar ‘A’ de ‘a’. Se encontrar alguma diferença, retorna 0. Se chegar até o fim sem erro, retorna 1, indicando que é um palíndromo.”
+
+
+6 -
+
+“A função contar_ocorrencias percorre a string caractere por caractere usando um ponteiro. Em cada posição, ela compara o caractere atual da string com o caractere que queremos procurar. Se forem iguais, incrementa o contador. Depois avança para o próximo caractere da string. Quando chega ao final da string, retorna o número total de vezes que aquele caractere aparece.”
+
+
+7 -
+
+A função contar_substring conta quantas vezes uma substring aparece dentro de um texto. A função percorre a string principal caractere por caractere e compara com a substring procurada. Quando encontra uma correspondência completa, ela incrementa um contador e continua a busca até o final da string. No final, a função retorna o número total de ocorrências encontradas no texto.
+
+
+8 - 
+
+“A função converter_para_maiusculas transforma todos os caracteres da string em letras maiúsculas. Ela percorre a string caractere por caractere usando um ponteiro. Para cada caractere, chama a função maiuscula, que verifica se ele está entre 'a' e 'z'. Se estiver, converte para maiúscula subtraindo 32 na tabela ASCII. O caractere convertido substitui o original na string. No final, toda a string fica em letras maiúsculas.”
+
+
+9 -
+
+“A função converter_para_minusculas transforma todos os caracteres da string em letras minúsculas. Ela percorre a string caractere por caractere usando um ponteiro. Para cada caractere, chama a função minuscula, que verifica se ele está entre 'A' e 'Z'. Se estiver, converte para minúscula somando 32 na tabela ASCII. O caractere convertido substitui o original na string. No final, toda a string fica em letras minúsculas.”
+
+
+10 -
+
+“A função inverter_string inverte os caracteres de uma string no próprio espaço de memória. Primeiro ela encontra o final da string percorrendo até o '\0'. Depois usa dois índices: um no início e outro no final da palavra. Enquanto o início for menor que o fim, ela troca os caracteres dessas posições usando uma variável temporária. Após cada troca, o início avança e o fim recua. No final, a string fica completamente invertida.”
+
+
+11 -
+
+“A função remover_espacos_extras remove espaços desnecessários de uma string. Ela usa dois ponteiros, que lê os caracteres, que escreve o resultado na própria string. Enquanto percorre o texto, copia os caracteres normalmente, mas só permite um espaço entre palavras. Também ignora espaços no início e remove espaço no final da string. No final para finalizar a nova string já normalizada.”
+
+
+12 -
+
+“A função substituir_caractere percorre a string caractere por caractere usando um índice. Em cada posição, ela verifica se o caractere atual é igual ao caractere que queremos substituir. Se for, ele é trocado pelo novo caractere. Depois o índice avança para continuar percorrendo a string até encontrar o final. No final do processo, todas as ocorrências do caractere antigo foram substituídas pelo novo.”
+
+
+13 -
+
+“A função primeiro_indice procura a primeira vez que um caractere aparece em uma string. Ela percorre a string usando um índice, começando na posição zero. Em cada posição, compara o caractere atual com o caractere procurado. Se encontrar, retorna imediatamente o índice onde ele aparece. Se chegar ao final da string sem encontrar o caractere, a função retorna -1, indicando que ele não existe na string.”
+
+
+14 -
+
+“A função ultimo_indice encontra a última posição em que um caractere aparece em uma string. Ela percorre a string caractere por caractere usando um índice. Sempre que encontra o caractere procurado, guarda essa posição na variável ultimo. Mesmo assim continua percorrendo a string até o final. Dessa forma, a última ocorrência encontrada sobrescreve as anteriores. No final, a função retorna o índice da última ocorrência ou -1 se o caractere não existir na string.”
+
+
+15 -
+
+“A função extrair_iniciais pega um nome completo e retorna apenas as iniciais das palavras. Primeiro ela verifica se a string não está vazia e pega a primeira letra do nome, convertendo para maiúscula se necessário. Depois percorre toda a string e, sempre que encontra um espaço, pega a primeira letra da próxima palavra. Essa letra também é convertida para maiúscula e adicionada na string destino. No final, finaliza a nova string com todas as iniciais.
+
+
+16 -
+
+"A função anagrama verifica se duas palavras são formadas pelas mesmas letras. Primeiro ela calcula o tamanho das duas strings. Se os tamanhos forem diferentes, já retorna 0, porque não podem ser anagramas. Depois percorre cada letra da primeira palavra e procura uma letra igual na segunda palavra que ainda não tenha sido usada. Quando encontra, marca essa posição como usada. Se alguma letra não for encontrada, retorna 0. Se todas as letras tiverem correspondência, retorna 1, indicando que são anagramas.”
+
+
+17 -
+
+“A função contar_digitos conta quantos números existem dentro de uma string. Ela percorre a string caractere por caractere usando um índice. Em cada posição, verifica se o caractere está entre '0' e '9', que representam os dígitos na tabela ASCII. Se for um número, incrementa o contador. Depois continua até o final da string. No final, a função retorna a quantidade total de dígitos encontrados.”
+
+
+18 -
+
+“A função alfabetico verifica se uma string contém apenas letras. Ela percorre a palavra caractere por caractere usando um índice. Em cada posição, verifica se o caractere está entre 'a' e 'z' ou entre 'A' e 'Z'. Se encontrar qualquer número, espaço ou símbolo, retorna 0 imediatamente. Se percorrer toda a string e todos os caracteres forem letras, retorna 1, indicando que a string é totalmente alfabética.”
+
+
+19 -
+
+“A função numerico verifica se uma string contém apenas números. Primeiro ela checa se a string está vazia; nesse caso, retorna 1. Depois percorre a string caractere por caractere usando um índice. Em cada posição, verifica se o caractere está entre '0' e '9'. Se encontrar qualquer caractere que não seja número, retorna 0 imediatamente. Se chegar ao final da string e todos forem dígitos, retorna 1, indicando que a string é totalmente numérica.”
+
+
+20 -
+
+“A função capitalizar_palavras transforma a primeira letra de cada palavra em maiúscula. Primeiro ela verifica se a primeira letra da string é minúscula e, converte para maiúscula usando a tabela ASCII. Depois percorre toda a string caractere por caractere. Sempre que encontra um espaço, verifica se a próxima letra é minúscula e a transforma em maiúscula. Assim, cada palavra da frase passa a começar com letra maiúscula.”
